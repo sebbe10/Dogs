@@ -81,6 +81,8 @@ $writename = new DogHotell();
 foreach($myDogs->getDogs() as $dog){
     echo $render->Info($dog);
 }
+
+echo $writename->getName($breed);
 ?>
 </body>
 </html>
