@@ -27,10 +27,9 @@ class Dog {
     function getBreed():string {
       return "Ras: {$this->breed}";
     }
-
-
+    
     function name():string {
-        return "<li>$dog->name</li>";
+        return "Name: {$this->name}";
     }
 }
 
