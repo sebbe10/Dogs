@@ -51,7 +51,7 @@ class RenderDog {
     }
 
     function renderDogName():string {
-        return "<li>$dog->getBreed()</li>";
+        return "<li>{$dog->getBreed()}</li>";
         }
 }
 
