@@ -28,8 +28,9 @@ class Dog {
       return "Ras: {$this->breed}";
     }
 
-    function renderDogName():string {
-    return "<li>$dog->getBreed()</li>";
+
+    function name():string {
+        return "<li>$dog->name</li>";
     }
 }
 
@@ -49,6 +50,10 @@ class RenderDog {
     function Info(Dog $dog): string {
         return "<p>{$dog->getInfo()}</p>";
     }
+
+    function renderDogName():string {
+        return "<li>$dog->getBreed()</li>";
+        }
 }
 
 $myDogs = new DogHotell(
