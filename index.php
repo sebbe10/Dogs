@@ -5,17 +5,19 @@ class Dog {
     private $name = "";
     private $color = "";
     private $age =0;
+    private $with = 0;
 
     // Konstruktor
-    function __construct(string $name, string $color, int $age){
+    function __construct(string $name, string $color, int $age, int $with){
         $this->name = $name;
         $this->color = $color;
         $this->age = $age;
+        $this->with = $with;
     }
 
     // Metod = funktion inne i objekt
     function getInfo(): string {
-        return "Name: {$this->name}, Color: {$this->color}, Age: {$this->age}";
+        return "Name: {$this->name}, Color: {$this->color}, Age: {$this->age}, With: {$this->with}";
     }
 }
 
@@ -38,11 +40,13 @@ class RenderDog {
 }
 
 $myDogs = new DogHotell(
-    new Dog("Sebbe", "White", 20),
-    new Dog("Sebb", "White", 21),
-    new Dog("Seb", "White", 22),
-    new Dog("Se", "White", 23),
-    new Dog("S", "White", 24)
+    [
+    new Dog("Sebbe", "White", 20, 50, "Tax1"),
+    new Dog("Sebb", "White", 21, 40), "Tax2",
+    new Dog("Seb", "White", 22, 30, "Tax3"),
+    new Dog("Se", "White", 23, 20, "Tax4"),
+    new Dog("S", "White", 24, 10, "Tax5")
+    ]
 );
 
 
