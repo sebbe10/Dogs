@@ -24,8 +24,12 @@ class Dog {
         return "Name: {$this->name}, Color: {$this->color}, Age: {$this->age}, With: {$this->with}, Breed: {$this->breed}, Height: {$this->height}";
     }
 
-    function getName($breed):string {
-        return "<li>Breed: {$breed->getName}</li>";
+    function getBreed():string {
+      return "Ras: {$this->breed}";
+    }
+
+    function renderDogName():string {
+    return "<li>$dog->getBreed()</li>";
     }
 }
 
@@ -60,7 +64,6 @@ $myDogs = new DogHotell(
 
 // $Writeout = new Dog("Sebbe", "White", 20);
 $render = new RenderDog();
-$writename = new DogHotell();
 
 // echo "<h3>Name: {$Writeout->name}</h3>";
 // echo "<h3>Age: {$Writeout->age}</h3>";
@@ -81,8 +84,6 @@ $writename = new DogHotell();
 foreach($myDogs->getDogs() as $dog){
     echo $render->Info($dog);
 }
-
-echo $writename->getName($breed);
 ?>
 </body>
 </html>
